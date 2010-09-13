@@ -16,11 +16,11 @@ class GenobioMembers extends XoopsObject
         $this->initVar('member_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('category_id', XOBJ_DTYPE_INT, null, false);		
 		$this->initVar('uid', XOBJ_DTYPE_INT, null, false);	
-		$this->initVar('domain', XOBJ_DTYPE_OTHER, null, false);		
+		$this->initVar('domain', XOBJ_DTYPE_UNICODE_OTHER, null, false);		
 		$this->initVar('domains', XOBJ_DTYPE_ARRAY, null, false);				
         $this->initVar('display_name', XOBJ_DTYPE_TXTBOX, null, true, 64);
-		$this->initVar('display_picture', XOBJ_DTYPE_OTHER, null, true, 20);		
-		$this->initVar('member_sex', XOBJ_DTYPE_OTHER, null, true, 10);				
+		$this->initVar('display_picture', XOBJ_DTYPE_UNICODE_OTHER, null, true, 20);		
+		$this->initVar('member_sex', XOBJ_DTYPE_UNICODE_OTHER, null, true, 10);				
     }
 
 }

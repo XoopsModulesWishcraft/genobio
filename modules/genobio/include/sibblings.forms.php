@@ -14,7 +14,7 @@
 			$history = $sibbling->getVar('history');
 			$activities = $sibbling->getVar('activities');
 			$toys = $sibbling->getVar('toys');			
-			$title = 'Edit Sibblings Item';
+			$title = _AM_GENOBIO_EDITSIBBLING;
 		} else {
 			$sibblings_id = 0;
 			$members_group = array();
@@ -23,25 +23,17 @@
 			$history = '';
 			$activities = '';
 			$toys = '';			
-			$title = 'New Sibblings Item';
+			$title = _AM_GENOBIO_NEWSIBBLING;
 		}
 		
 		$form = new XoopsThemeForm($title, "edititem", "", "post");
-
-		$editor_config['editor'] = 'fckeditor';
-		$editor_config['rows'] = 50;
-		$editor_config['cols'] = 20;
 		
 		$form->addElement(new GenobioFormSelectMember(_GB_AM_MEMBERS, "members_group", $members_group, 10, true));
 		$form->addElement(new XoopsFormText(_GB_AM_GROUPNICKNAME, "nickname", 35, 255, $nickname));
-		$editor_config['value'] = $bio;
-		$form->addElement(new XoopsFormEditor(_GB_AM_GROUPBIO, "bio", $editor_config));
-		$editor_config['value'] = $history;
-		$form->addElement(new XoopsFormEditor(_GB_AM_GROUPHISTORY, "history", $editor_config));
-		$editor_config['value'] = $activities;
-		$form->addElement(new XoopsFormEditor(_GB_AM_GROUPACTIVITIES, "activities", $editor_config));
-		$editor_config['value'] = $toys;
-		$form->addElement(new XoopsFormEditor(_GB_AM_GROUPTOYS, "toys", $editor_config));
+		$form->addElement(new XoopsFormEditor(_GB_AM_GROUPBIO, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "bio", 'value' => $bio)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_GROUPHISTORY, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "history", 'value' => $history)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_GROUPACTIVITIES, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "activities", 'value' => $activities)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_GROUPTOYS, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "toys", 'value' => $toys)));
 
 		$form->addElement(new XoopsFormHidden("id", $id));
 		$form->addElement(new XoopsFormHidden("op", "sibblings"));		
@@ -53,7 +45,7 @@
 	function sel_sibblings_form()
 	{
 	
-		$form = new XoopsThemeForm('Current Sibblings', "current", "", "post");
+		$form = new XoopsThemeForm(_AM_GENOBIO_CURRENTSIBBLING, "current", "", "post");
 
 		$sibblingshandler = xoops_getmodulehandler('sibblings','genobio');
 		$sibblings = $sibblingshandler->getObjects($criteria);	

@@ -16,10 +16,10 @@ class GenobioSibblings extends XoopsObject
         $this->initVar('sibblings_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('members_group', XOBJ_DTYPE_ARRAY, null, true);		
         $this->initVar('nickname', XOBJ_DTYPE_TXTBOX, null, true, 255);		
-        $this->initVar('bio', XOBJ_DTYPE_OTHER, null, true);		
-        $this->initVar('history', XOBJ_DTYPE_OTHER, null, true);		
-        $this->initVar('activities', XOBJ_DTYPE_OTHER, null, true);										
-        $this->initVar('toys', XOBJ_DTYPE_OTHER, null, true);												
+        $this->initVar('bio', XOBJ_DTYPE_UNICODE_OTHER, null, true);		
+        $this->initVar('history', XOBJ_DTYPE_UNICODE_OTHER, null, true);		
+        $this->initVar('activities', XOBJ_DTYPE_UNICODE_OTHER, null, true);										
+        $this->initVar('toys', XOBJ_DTYPE_UNICODE_OTHER, null, true);												
     }
 
 }

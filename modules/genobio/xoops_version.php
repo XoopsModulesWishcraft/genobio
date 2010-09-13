@@ -14,23 +14,23 @@
 if (!defined('XOOPS_ROOT_PATH')) {
 	die('XOOPS root path not defined');
 }
-$modversion['dirname'] = basename(dirname(__FILE__));
-$modversion['name'] = ucfirst(basename(dirname(__FILE__)));
-$modversion['version']     = "0.13";
-$modversion['releasedate'] = "Friday: 2009-06-26";
-$modversion['status']      = "Alpha 1";
+$modversion['dirname'] 	   = 'genobio';
+$modversion['name'] 	   = 'GenoBio';
+$modversion['version']     = "1.15";
+$modversion['releasedate'] = "Tues: 2010-07-20";
+$modversion['status']      = "Stable";
 $modversion['description'] = _MI_GENOBIO_DESC;
 $modversion['credits']     = "Wishcraft, Trabis, Runeher";
 $modversion['author']      = "Wishcraft";
 $modversion['help']        = "";
 $modversion['license']     = "A small genological biographic wiki multisite profiler.";
-$modversion['official']    = 0;
+$modversion['official']    = 1;
 $modversion['image']       = "images/genobio_slogo.png";
 
 $modversion['author_realname'] = "Simon Roberts";
 $modversion['author_website_url'] = "http://www.chronolabs.org.au";
 $modversion['author_website_name'] = "Chronolabs Australia";
-$modversion['author_email'] = "simon@xoops.org";
+$modversion['author_email'] = "simon@chronolabs.coop";
 $modversion['demo_site_url'] = "Chronolabs Australia";
 $modversion['demo_site_name'] = "http://roberts.co.in/";
 $modversion['support_site_url'] = "http://www.chronolabs.org.au/forums/viewforum.php?forum=32";
@@ -81,4 +81,16 @@ $modversion['comments']['itemName'] = 'id';
 $modversion['comments']['pageName'] = 'index.php';
 $modversion['comments']['extraParams'] = array('op');
 
+xoops_load('XoopsEditorHandler');
+$editor_handler = XoopsEditorHandler::getInstance();
+foreach ($editor_handler->getList(false) as $id => $val)
+	$options[$val] = $id;
+	
+$modversion['config'][1]['name'] = 'editor';
+$modversion['config'][1]['title'] = "_MI_GENOBIO_EDITORS";
+$modversion['config'][1]['description'] = "_MI_GENOBIO_EDITORS_DESC";
+$modversion['config'][1]['formtype'] = 'select';
+$modversion['config'][1]['valuetype'] = 'text';
+$modversion['config'][1]['default'] = 'ckeditor';
+$modversion['config'][1]['options'] = $options;
 ?>

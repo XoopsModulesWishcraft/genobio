@@ -49,4 +49,33 @@
 	define('_GB_AM_ASSOCIATEDDOMAIN', 'Associated Domain:');		
 	define('_GB_AM_CATNAME', 'Name:');											
 
+	define('_AM_GENOBIO_EDITCATEGORY', 'Edit categories Item');
+	define('_AM_GENOBIO_NEWCATEGORY', 'New categories Item');
+	define('_AM_GENOBIO_NEWMEMBER', 'Edit Members Item');
+	define('_AM_GENOBIO_EDITMEMBER', 'New Members Item');
+	define('_AM_GENOBIO_EDITSIBBLING', 'Edit Sibblings Item');
+	define('_AM_GENOBIO_NEWSIBBLING', 'New Sibblings Item');
+
+	define('_AM_GENOBIO_CURRENTSIBBLING', 'Current Sibblings');
+	define('_AM_GENOBIO_CURRENTCATEGORY', 'Current Categories');
+	define('_AM_GENOBIO_CURRENTMEMBER', 'Current Members');
+	define('_AM_GENOBIO_PROFILEEDIT', 'Edit Sibblings Item - %s');
+	
+	define('_AM_GENOBIO_EDITSIBBLING', 'Edit Sibblings Item');
+	define('_AM_GENOBIO_NEWSIBBLING', 'New Sibblings Item');
+	define('_AM_GENOBIO_EDITSIBBLING', 'Edit Sibblings Item');
+	define('_AM_GENOBIO_NEWSIBBLING', 'New Sibblings Item');
+	define('_AM_GENOBIO_EDITSIBBLING', 'Edit Sibblings Item');
+	define('_AM_GENOBIO_NEWSIBBLING', 'New Sibblings Item');
+	define('_AM_GENOBIO_EDITSIBBLING', 'Edit Sibblings Item');
+	define('_AM_GENOBIO_NEWSIBBLING', 'New Sibblings Item');
+	define('_AM_GENOBIO_EDITSIBBLING', 'Edit Sibblings Item');
+	define('_AM_GENOBIO_NEWSIBBLING', 'New Sibblings Item');
+	define('_AM_GENOBIO_EDITSIBBLING', 'Edit Sibblings Item');
+	define('_AM_GENOBIO_NEWSIBBLING', 'New Sibblings Item');
+	define('_AM_GENOBIO_EDITSIBBLING', 'Edit Sibblings Item');
+	define('_AM_GENOBIO_NEWSIBBLING', 'New Sibblings Item');
+	define('_AM_GENOBIO_EDITSIBBLING', 'Edit Sibblings Item');
+	define('_AM_GENOBIO_NEWSIBBLING', 'New Sibblings Item');
+		
 ?>

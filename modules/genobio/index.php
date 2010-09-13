@@ -79,6 +79,8 @@
 			}
 		}		
 		
+		$myts =& MyTextSanitizer::getInstance();
+		
 		$GLOBALS['xoopsTpl']->assign('nickname', $profile->getVar('nickname'));
 		$GLOBALS['xoopsTpl']->assign('dob', $profile->getVar('dob'));
 		$GLOBALS['xoopsTpl']->assign('dod', $profile->getVar('dod'));
@@ -87,24 +89,24 @@
 		$GLOBALS['xoopsTpl']->assign('weight', $profile->getVar('weight'));
 		$GLOBALS['xoopsTpl']->assign('colour_hair', $profile->getVar('colour_hair'));
 		$GLOBALS['xoopsTpl']->assign('colour_eyes', $profile->getVar('colour_eyes'));
-		$GLOBALS['xoopsTpl']->assign('bio', $profile->getVar('bio'));
-		$GLOBALS['xoopsTpl']->assign('history', $profile->getVar('history'));
-		$GLOBALS['xoopsTpl']->assign('education', $profile->getVar('education'));
-		$GLOBALS['xoopsTpl']->assign('fellowship', $profile->getVar('fellowship'));
-		$GLOBALS['xoopsTpl']->assign('earlyhistory', $profile->getVar('earlyhistory'));
-		$GLOBALS['xoopsTpl']->assign('medical', $profile->getVar('medical'));
-		$GLOBALS['xoopsTpl']->assign('achivements', $profile->getVar('achivements'));
-		$GLOBALS['xoopsTpl']->assign('contributations', $profile->getVar('contributations'));
-		$GLOBALS['xoopsTpl']->assign('awards', $profile->getVar('awards'));
-		$GLOBALS['xoopsTpl']->assign('media', $profile->getVar('media'));
-		$GLOBALS['xoopsTpl']->assign('publications', $profile->getVar('publications'));
-		$GLOBALS['xoopsTpl']->assign('jobs', $profile->getVar('jobs'));
-		$GLOBALS['xoopsTpl']->assign('spirtual', $profile->getVar('spirtual'));
-		$GLOBALS['xoopsTpl']->assign('hates', $profile->getVar('hates'));
-		$GLOBALS['xoopsTpl']->assign('likes', $profile->getVar('likes'));
-		$GLOBALS['xoopsTpl']->assign('music', $profile->getVar('music'));
-		$GLOBALS['xoopsTpl']->assign('thearts', $profile->getVar('thearts'));
-		$GLOBALS['xoopsTpl']->assign('other', $profile->getVar('other'));
+		$GLOBALS['xoopsTpl']->assign('bio', $myts->displayTarea($profile->getVar('bio')));
+		$GLOBALS['xoopsTpl']->assign('history', $myts->displayTarea($profile->getVar('history')));
+		$GLOBALS['xoopsTpl']->assign('education', $myts->displayTarea($profile->getVar('education')));
+		$GLOBALS['xoopsTpl']->assign('fellowship', $myts->displayTarea($profile->getVar('fellowship')));
+		$GLOBALS['xoopsTpl']->assign('earlyhistory', $myts->displayTarea($profile->getVar('earlyhistory')));
+		$GLOBALS['xoopsTpl']->assign('medical', $myts->displayTarea($profile->getVar('medical')));
+		$GLOBALS['xoopsTpl']->assign('achivements', $myts->displayTarea($profile->getVar('achivements')));
+		$GLOBALS['xoopsTpl']->assign('contributations', $myts->displayTarea($profile->getVar('contributations')));
+		$GLOBALS['xoopsTpl']->assign('awards', $myts->displayTarea($profile->getVar('awards')));
+		$GLOBALS['xoopsTpl']->assign('media', $myts->displayTarea($profile->getVar('media')));
+		$GLOBALS['xoopsTpl']->assign('publications', $myts->displayTarea($profile->getVar('publications')));
+		$GLOBALS['xoopsTpl']->assign('jobs', $myts->displayTarea($profile->getVar('jobs')));
+		$GLOBALS['xoopsTpl']->assign('spirtual', $myts->displayTarea($profile->getVar('spirtual')));
+		$GLOBALS['xoopsTpl']->assign('hates', $myts->displayTarea($profile->getVar('hates')));
+		$GLOBALS['xoopsTpl']->assign('likes', $myts->displayTarea($profile->getVar('likes')));
+		$GLOBALS['xoopsTpl']->assign('music', $myts->displayTarea($profile->getVar('music')));
+		$GLOBALS['xoopsTpl']->assign('thearts', $myts->displayTarea($profile->getVar('thearts')));
+		$GLOBALS['xoopsTpl']->assign('other', $myts->displayTarea($profile->getVar('other')));
 																									
 	
 		include XOOPS_ROOT_PATH . '/include/comment_view.php';

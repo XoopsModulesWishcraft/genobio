@@ -49,16 +49,14 @@
 			$thearts = $profile->getVar('thearts');															
 			$other = $profile->getVar('other');
 						
-			$title = 'Edit Sibblings Item - '.$member->getVar('display_name');
+			$title = sprintf(_AM_GENOBIO_PROFILEEDIT, $member->getVar('display_name'));
 		} else {
 			redirect_header('index.php', 2, _GB_NOID);
 			exit;
 		}
 		
 		$form = new XoopsThemeForm($title, "edititem", "", "post");
-
-		$editor_config['editor'] = 'fckeditor';
-		
+	
 		$form->addElement(new GenobioFormSelectMember(_GB_AM_FATHER, "member_father_id", $member_father_id, 1, false));
 		$form->addElement(new GenobioFormSelectMember(_GB_AM_MOTHER, "member_mother_id", $member_mother_id, 1, false));
 		$form->addElement(new GenobioFormSelectMember(_GB_AM_PARTNER, "member_partner_id", $member_partner_id, 1, false));
@@ -79,42 +77,24 @@
 		$form->addElement(new XoopsFormFile(_GB_AM_CURRENTPHOTO, "current_photo", 1024*8172*2));				
 		$form->insertBreak();
 		
-		$editor_config['value'] = $bio;
-		$form->addElement(new XoopsFormEditor(_GB_AM_INDIVIDUALBIO, "bio", $editor_config));
-		$editor_config['value'] = $history;
-		$form->addElement(new XoopsFormEditor(_GB_AM_HISTORY, "history", $editor_config));
-		$editor_config['value'] = $education;
-		$form->addElement(new XoopsFormEditor(_GB_AM_EDUCATION, "education", $editor_config));
-		$editor_config['value'] = $fellowship;
-		$form->addElement(new XoopsFormEditor(_GB_AM_FELLOWSHIP, "fellowship", $editor_config));
-		$editor_config['value'] = $earlyhistory;
-		$form->addElement(new XoopsFormEditor(_GB_AM_EARLYHISTORY, "earlyhistory", $editor_config));
-		$editor_config['value'] = $medical;
-		$form->addElement(new XoopsFormEditor(_GB_AM_MEDICAL, "medical", $editor_config));
-		$editor_config['value'] = $achivements;
-		$form->addElement(new XoopsFormEditor(_GB_AM_ACHIEVEMENTS, "achivements", $editor_config));
-		$editor_config['value'] = $contributations;
-		$form->addElement(new XoopsFormEditor(_GB_AM_CONTRIBUTIONS, "contributations", $editor_config));
-		$editor_config['value'] = $awards;
-		$form->addElement(new XoopsFormEditor(_GB_AM_AWARDS, "awards", $editor_config));
-		$editor_config['value'] = $media;
-		$form->addElement(new XoopsFormEditor(_GB_AM_MEDIA, "media", $editor_config));
-		$editor_config['value'] = $publications;
-		$form->addElement(new XoopsFormEditor(_GB_AM_PUBLICATION, "publications", $editor_config));
-		$editor_config['value'] = $jobs;
-		$form->addElement(new XoopsFormEditor(_GB_AM_EMPLOYMENT, "jobs", $editor_config));
-		$editor_config['value'] = $spirtual;
-		$form->addElement(new XoopsFormEditor(_GB_AM_SPIRITUAL, "spirtual", $editor_config));
-		$editor_config['value'] = $hates;
-		$form->addElement(new XoopsFormEditor(_GB_AM_INDIVIDUALHATES, "hates", $editor_config));
-		$editor_config['value'] = $likes;
-		$form->addElement(new XoopsFormEditor(_GB_AM_INDIVIDUALLIKES, "likes", $editor_config));
-		$editor_config['value'] = $music;		
-		$form->addElement(new XoopsFormEditor(_GB_AM_MUSIC, "music", $editor_config));
-		$editor_config['value'] = $thearts;
-		$form->addElement(new XoopsFormEditor(_GB_AM_THEARTS, "thearts", $editor_config));
-		$editor_config['value'] = $other;
-		$form->addElement(new XoopsFormEditor(_GB_AM_OTHER, "other", $editor_config));
+		$form->addElement(new XoopsFormEditor(_GB_AM_INDIVIDUALBIO, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "bio", 'value' => $bio)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_HISTORY, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "history", 'value' => $history)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_EDUCATION, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "education", 'value' => $education)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_FELLOWSHIP, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "fellowship", 'value' => $fellowship)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_EARLYHISTORY, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "earlyhistory", 'value' => $earlyhistory)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_MEDICAL, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "medical", 'value' => $medical)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_ACHIEVEMENTS, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "achivements", 'value' => $achivements)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_CONTRIBUTIONS, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "contributations", 'value' => $contributations)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_AWARDS, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "awards", 'value' => $awards)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_MEDIA, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "media", 'value' => $media)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_PUBLICATION, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "publications", 'value' => $publications)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_EMPLOYMENT, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "jobs", 'value' => $jobs)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_SPIRITUAL, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "spirtual", 'value' => $spirtual)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_INDIVIDUALHATES, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "hates", 'value' => $hates)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_INDIVIDUALLIKES, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "likes", 'value' => $likes)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_MUSIC, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "music", 'value' => $music)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_THEARTS, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "thearts", 'value' => $thearts)));
+		$form->addElement(new XoopsFormEditor(_GB_AM_OTHER, $GLOBALS['xoopsModuleConfig']['editor'], array('name' => "other", 'value' => $other)));
 
 		$form->addElement(new XoopsFormHidden("id", $id));
 		$form->addElement(new XoopsFormHidden("op", "profiles"));		

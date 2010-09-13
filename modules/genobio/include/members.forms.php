@@ -15,7 +15,7 @@
 			$display_name = $members->getVar('display_name');
 			$display_picture = $members->getVar('display_picture');			
 			$member_sex = $members->getVar('member_sex');						
-			$title = 'Edit Members Item';
+			$title = _AM_GENOBIO_EDITMEMBER;
 		} else {
 			$category_id = 0;
 			$uid = 0;
@@ -23,7 +23,7 @@
 			$domains = array(0=>urlencode(XOOPS_URL));
 			$display_name = '';
 			$display_picture = 'current_photo';
-			$title = 'New Members Item';
+			$title = _AM_GENOBIO_NEWMEMBER;
 		}
 		
 		$form = new XoopsThemeForm($title, "edititem", "", "post");
@@ -54,7 +54,7 @@
 	function sel_members_form()
 	{
 	
-		$form = new XoopsThemeForm('Current Members', "current", "", "post");
+		$form = new XoopsThemeForm(_AM_GENOBIO_CURRENTMEMBER, "current", "", "post");
 
 		$membershandler = xoops_getmodulehandler('members','genobio');
 		$criteria = new Criteria('1', 1);

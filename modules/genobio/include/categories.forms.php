@@ -11,12 +11,12 @@
 			$category_id = $categories->getVar('category_id');
 			$category_name = $categories->getVar('category_name');	
 			$category_weight = $categories->getVar('category_weight');	
-			$title = 'Edit categories Item';
+			$title = _AM_GENOBIO_EDITCATEGORY;
 		} else {
 			$category_id = 0;
 			$category_weight = 1;
 			$category_name = '';
-			$title = 'New categories Item';
+			$title = _AM_GENOBIO_NEWCATEGORY;
 		}
 		
 		$form = new XoopsThemeForm($title, "edititem", "", "post");
@@ -34,7 +34,7 @@
 	function sel_categories_form()
 	{
 	
-		$form = new XoopsThemeForm('Current categoriess', "current", "", "post");
+		$form = new XoopsThemeForm(_AM_GENOBIO_CURRENTCATEGORY, "current", "", "post");
 
 		$categorieshandler = xoops_getmodulehandler('categories','genobio');
 		$criteria = new Criteria('1', 1);

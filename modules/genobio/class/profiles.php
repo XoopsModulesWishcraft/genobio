@@ -35,24 +35,24 @@ class GenobioProfiles extends XoopsObject
 		$this->initVar('current_photo', XOBJ_DTYPE_TXTBOX, null, false, 255);
 		$this->initVar('user_quote_id', XOBJ_DTYPE_INT, null, false);
 		$this->initVar('album_submission_id', XOBJ_DTYPE_INT, null, false);
-		$this->initVar('bio', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('history', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('education', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('fellowship', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('earlyhistory', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('medical', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('achivements', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('contributations', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('awards', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('media', XOBJ_DTYPE_OTHER, null, false);																
-		$this->initVar('publications', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('jobs', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('spirtual', XOBJ_DTYPE_OTHER, null, false);
-		$this->initVar('hates', XOBJ_DTYPE_OTHER, null, false);																		
-		$this->initVar('likes', XOBJ_DTYPE_OTHER, null, false);																		
-		$this->initVar('music', XOBJ_DTYPE_OTHER, null, false);																		
-		$this->initVar('thearts', XOBJ_DTYPE_OTHER, null, false);																		
-		$this->initVar('other', XOBJ_DTYPE_OTHER, null, false);																										
+		$this->initVar('bio', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('history', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('education', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('fellowship', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('earlyhistory', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('medical', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('achivements', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('contributations', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('awards', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('media', XOBJ_DTYPE_UNICODE_OTHER, null, false);																
+		$this->initVar('publications', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('jobs', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('spirtual', XOBJ_DTYPE_UNICODE_OTHER, null, false);
+		$this->initVar('hates', XOBJ_DTYPE_UNICODE_OTHER, null, false);																		
+		$this->initVar('likes', XOBJ_DTYPE_UNICODE_OTHER, null, false);																		
+		$this->initVar('music', XOBJ_DTYPE_UNICODE_OTHER, null, false);																		
+		$this->initVar('thearts', XOBJ_DTYPE_UNICODE_OTHER, null, false);																		
+		$this->initVar('other', XOBJ_DTYPE_UNICODE_OTHER, null, false);																										
     }
 
 }
