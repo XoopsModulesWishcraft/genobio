@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+#div_member_display_image {
+	text-align:  center;
+}
+
+#div_pagenav_left {
+	float: left;
+	clear: both;
+}
+
+#div_pagenav_right {
+	float: right;
+	clear: both;
+}
+
+#div_row {
+	width: 100%;
+	clear: both;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+#div_item_left {
+	float: left;
+	text-align: center;
+	padding: 20px 20px 20px 20px;
+}
+
+#div_item_right {
+	float: right;
+	width: 49%;
+	text-align: center;
+	padding: 20px 20px 20px 20px;
+}
+
+#div_image {
+	padding: 15px 15px 15px 15px;
+	clear:both;
+}
+
+#img_display_image {
+	background-color: #FFFFFF;
+}
+
+#img_display_image.hover {
+	background-color:#669999;
+}
+
+#div_name {
+	clear: both;
+	text-align: center;
+	font-weight: bold;
+}
