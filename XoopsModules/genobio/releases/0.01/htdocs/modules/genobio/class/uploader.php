@@ -1,5 +1,5 @@
 <?php 
-/* $Id: uploader.php,v 1.00 2004/07/11 07:16:07 John N Exp $
+/* $Id$
  * Module: WF-Links
  * Version: v1.0.3
  * Release Date: 21 June 2005
